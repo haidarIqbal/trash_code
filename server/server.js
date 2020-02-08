@@ -16,7 +16,9 @@ app.use(
     extended: true
   })
 );
-// app.post("/login", (req, res) => {})
+app.get("/", (req, res) => {
+  res.send("yo connected");
+});
 // app.post("/login", (req, res) => {
 //   var body = _.pick(req.body, ["email", "password"]);
 //   userModel.User.findOne({ email: body.email }, (err, user) => {
