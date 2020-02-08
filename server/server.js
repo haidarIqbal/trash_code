@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 //var userModel = require("../model/user");
 const _ = require("lodash");
 var app = express();
-var port = 3000;
+var port = 12876;
 
 var server = app.listen(port, () => {
   console.log("listening on port 3000");
@@ -16,6 +16,7 @@ app.use(
     extended: true
   })
 );
+// app.post("/login", (req, res) => {})
 // app.post("/login", (req, res) => {
 //   var body = _.pick(req.body, ["email", "password"]);
 //   userModel.User.findOne({ email: body.email }, (err, user) => {
