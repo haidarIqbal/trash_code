@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 //var userModel = require("../model/user");
 const _ = require("lodash");
 var app = express();
-var port = 12876;
+var port = 3000;
 
 var server = app.listen(port, () => {
   console.log("listening on port 3000");
