@@ -91,8 +91,18 @@ IO.on("connection", socket => {
     IO.emit("message", {
       from: message.from,
       text: message.text,
+      video: message.videoTag,
       createdAt: new Date().toLocaleTimeString()
       //code: message.timeCode
+    });
+  });
+
+  socket.on("newPublicMsg", message => {
+    IO.emit("publicMessage", {
+      from: message.from,
+      text: message.text,
+      video: message.videoTag,
+      createdAt: new Date().toLocaleTimeString()
     });
   });
 });
